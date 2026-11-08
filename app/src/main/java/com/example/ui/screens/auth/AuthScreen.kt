@@ -36,7 +36,7 @@ fun AuthScreen(viewModel: SocialViewModel) {
   var phoneNumber by remember { mutableStateOf("9876543210") }
   var otpCode by remember { mutableStateOf("") }
   var isOtpSent by remember { mutableStateOf(false) }
-  var userName by remember { mutableStateOf("Ankush Chamar") }
+  var userName by remember { mutableStateOf("Jitendra Kumar") }
   var emailAddress by remember { mutableStateOf("chamarankush326@gmail.com") }
   var countdown by remember { mutableStateOf(30) }
 
@@ -289,7 +289,7 @@ fun AuthScreen(viewModel: SocialViewModel) {
 
             Button(
               onClick = {
-                viewModel.login("Ankush Chamar", "+91 98765 43210")
+                viewModel.login("Jitendra Kumar", "+91 98765 43210")
               },
               modifier = Modifier
                 .fillMaxWidth()

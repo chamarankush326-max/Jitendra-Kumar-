@@ -30,8 +30,8 @@ class SocialRepository(context: Context) {
   private val _currentUser = MutableStateFlow(
     UserProfile(
       id = "user_me",
-      name = prefs.getString("user_name", "Ankush Chamar") ?: "Ankush Chamar",
-      username = prefs.getString("user_handle", "@ankush_bharat") ?: "@ankush_bharat",
+      name = prefs.getString("user_name", "Jitendra Kumar") ?: "Jitendra Kumar",
+      username = prefs.getString("user_handle", "@jitendra_kumar") ?: "@jitendra_kumar",
       bio = prefs.getString("user_bio", "Proud Indian 🇮🇳 | Tech Creator & Explorer | Connecting Bharat") ?: "Proud Indian 🇮🇳 | Tech Creator & Explorer | Connecting Bharat",
       avatarResId = R.drawable.avatar_user_one,
       phone = prefs.getString("user_phone", "+91 98765 43210") ?: "+91 98765 43210",
@@ -84,8 +84,8 @@ class SocialRepository(context: Context) {
       FeedPost(
         id = "post_2",
         userId = "user_me",
-        authorName = "Ankush Chamar",
-        authorHandle = "@ankush_bharat",
+        authorName = "Jitendra Kumar",
+        authorHandle = "@jitendra_kumar",
         authorAvatarRes = R.drawable.avatar_user_one,
         content = "Welcome everyone to Apna Social! Built for Bharat to connect communities, share reels, chat in our language and even recharge seamlessly. Let me know what you love most! 🚀📱",
         imageRes = R.drawable.hero_social_banner,
@@ -161,8 +161,8 @@ class SocialRepository(context: Context) {
       ReelVideo(
         id = "reel_3",
         userId = "user_me",
-        authorName = "Ankush Chamar",
-        authorHandle = "@ankush_bharat",
+        authorName = "Jitendra Kumar",
+        authorHandle = "@jitendra_kumar",
         authorAvatarRes = R.drawable.avatar_user_one,
         title = "3D Graphics & Jetpack Compose in action on Apna Social! Proudly made in India 🇮🇳",
         soundTrack = "Bharat Anthem - Instrumental",
@@ -220,7 +220,7 @@ class SocialRepository(context: Context) {
   private val _messages = MutableStateFlow<Map<String, List<ChatMessage>>>(
     mapOf(
       "conv_1" to listOf(
-        ChatMessage("m1", "u1", "user_me", "Namaste Ankush! How are you?", "10:30 AM", isMine = false),
+        ChatMessage("m1", "u1", "user_me", "Namaste Jitendra! How are you?", "10:30 AM", isMine = false),
         ChatMessage("m2", "user_me", "u1", "Namaste Priya! Everything is running fantastic on Apna Social.", "10:35 AM", isMine = true),
         ChatMessage("m3", "u1", "user_me", "Hey! Did you check out the new recharge tab?", "10:42 AM", isMine = false)
       ),
@@ -327,7 +327,7 @@ class SocialRepository(context: Context) {
     setLanguage(next)
   }
 
-  fun login(name: String = "Ankush Chamar", phone: String = "+91 98765 43210") {
+  fun login(name: String = "Jitendra Kumar", phone: String = "+91 98765 43210") {
     _isLoggedIn.value = true
     prefs.edit().putBoolean("is_logged_in", true).apply()
     _currentUser.value = _currentUser.value.copy(name = name, phone = phone)

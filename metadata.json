@@ -1,0 +1,6 @@
+{
+  "name": "Apna Social",
+  "description": "Modern Indian social media app featuring feeds, reels, photo sharing, chat, mobile recharge, bilingual Hindi/English, and admin panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
